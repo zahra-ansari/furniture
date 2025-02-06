@@ -4,7 +4,7 @@ import MenuBar from "../../Ui/MenuBar";
 import NavBar from "../../Ui/NavBar";
 import SideBar from "../../Ui/SideBar";
 import { useForm } from "react-hook-form";
-import { useSignup } from "./useSignup";
+//import { useSignup } from "./useSignup";
 import { useLogin } from "./useLogin";
 
 function AuthenticationHeadr() {
@@ -18,7 +18,7 @@ function AuthenticationHeadr() {
   const { register, handleSubmit, formState, getValues } = useForm();
   const { errors } = formState;
 
-  const { signup, isPendingSignup } = useSignup();
+  //const { signup, isPendingSignup } = useSignup();
   const { login, isPendingLogin } = useLogin();
 
   useEffect(() => {
@@ -63,7 +63,7 @@ function AuthenticationHeadr() {
 
   const onSubmit = (data) => {
     const { fullName, password, passwordConfirm, email, tel } = data;
-    signup({ fullName, password, passwordConfirm, email, tel });
+    //signup({ fullName, password, passwordConfirm, email, tel });
   };
 
   return (
@@ -105,12 +105,12 @@ function AuthenticationHeadr() {
                 type="text"
                 id="fullName"
                 placeholder="نام "
-                className={`border-0 border-b mb-8 ${
-                  isPendingSignup
-                    ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                    : ""
-                }`}
-                disabled={isPendingSignup}
+                // className={`border-0 border-b mb-8 ${
+                //   isPendingSignup
+                //     ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                //     : ""
+                // }`}
+                // disabled={isPendingSignup}
                 {...register("fullName", {
                   required: "پر کردن فیلد نام کاربری ضروری است",
                 })}
@@ -124,12 +124,12 @@ function AuthenticationHeadr() {
                 type="password"
                 id="password"
                 placeholder="رمز ورود"
-                className={`border-0 border-b mb-8 ${
-                  isPendingSignup
-                    ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                    : ""
-                }`}
-                disabled={isPendingSignup}
+                // className={`border-0 border-b mb-8 ${
+                //   isPendingSignup
+                //     ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                //     : ""
+                // }`}
+                // disabled={isPendingSignup}
                 {...register("password", {
                   required: "پر کردن فیلد رمز ورود ضروری است",
                   minLength: {
@@ -146,12 +146,12 @@ function AuthenticationHeadr() {
                 type="password"
                 id="passwordConfirm"
                 placeholder="تکرار رمز ورود"
-                className={`border-0 border-b mb-8 ${
-                  isPendingSignup
-                    ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                    : ""
-                }`}
-                disabled={isPendingSignup}
+                // className={`border-0 border-b mb-8 ${
+                //   isPendingSignup
+                //     ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                //     : ""
+                // }`}
+                //disabled={isPendingSignup}
                 {...register("passwordConfirm", {
                   required: "پر کردن فیلد تکرار رمز ورود ضروری است",
                   validate: (value) =>
@@ -169,12 +169,12 @@ function AuthenticationHeadr() {
                 type="email"
                 id="email"
                 placeholder="ایمیل"
-                className={`border-0 border-b mb-8 ${
-                  isPendingSignup
-                    ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                    : ""
-                }`}
-                disabled={isPendingSignup}
+                // className={`border-0 border-b mb-8 ${
+                //   isPendingSignup
+                //     ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                //     : ""
+                // }`}
+                //disabled={isPendingSignup}
                 {...register("email", {
                   required: "پر کردن فیلد ایمیل ضروری است",
                   pattern: {
@@ -191,12 +191,12 @@ function AuthenticationHeadr() {
                 type="tel"
                 id="tel"
                 placeholder="09130000000"
-                className={`border-0 border-b mb-8 ${
-                  isPendingSignup
-                    ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                    : ""
-                }`}
-                disabled={isPendingSignup}
+                // className={`border-0 border-b mb-8 ${
+                //   isPendingSignup
+                //     ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                //     : ""
+                // }`}
+                //disabled={isPendingSignup}
                 {...register("tel", {
                   required: "پر کردن فیلد شماره همراه ضروری است",
                   pattern: {
@@ -211,10 +211,10 @@ function AuthenticationHeadr() {
 
               <button
                 type="sumbit"
-                disabled={isPendingSignup}
+                //disabled={isPendingSignup}
                 className="bg-green text-white rounded-ss-lg rounded-se-sm rounded-ee-lg rounded-es-sm"
               >
-                {isPendingSignup ? "در حال ثبت نام شدن ..." : "ثبت نام"}
+                {/* {isPendingSignup ? "در حال ثبت نام شدن ..." : "ثبت نام"} */}
               </button>
             </form>
 
