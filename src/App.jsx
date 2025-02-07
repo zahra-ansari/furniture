@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import AppLayout from "./Ui/AppLayout";
@@ -28,7 +28,7 @@ function App() {
           error: { duration: 6000 },
         }}
       />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to="landing" />} />
@@ -51,7 +51,7 @@ function App() {
             <Route path="authentication" element={<Authentication />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </QueryClientProvider>
   );
 }
