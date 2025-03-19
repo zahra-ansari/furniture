@@ -15,3 +15,15 @@
 //   }
 //   return data;
 // }
+
+export async function getProductDetail(slug) {
+  const response = await fetch(
+    `https://furnitureshopp.pythonanywhere.com/products/${slug}/`
+  );
+  if (!response.ok) {
+    throw new Error("NetWork response was not ok");
+  }
+  const data = await response.json();
+
+  return data;
+}

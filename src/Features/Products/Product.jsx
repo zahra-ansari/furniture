@@ -1,28 +1,41 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 //import { useProductRating } from "./useProductRating";
 //import Spinner from "../../Ui/Spinner";
 import { useBuyProducts } from "./useBuyProducts";
 
 function Product({ product }) {
-  const { id, name, price, image_url, type, discount } = product;
+  const {
+    category,
+    color,
+    create_at,
+    discount,
+    final_price,
+    image,
+    lenght,
+    meterial,
+    rating,
+    slug,
+    title,
+    update_at,
+    weight,
+    width,
+  } = product;
   //const { averageRating, isLoading } = useProductRating(id);
   const { buyProducts } = useBuyProducts();
 
-  const discountedPrice = price - (price * discount) / 100;
-
-  const location = useLocation();
-  const parentPath = location.pathname.split("/")[1];
-  const childPath = location.pathname.split("/")[2];
+  const discountedPrice = final_price - (final_price * discount) / 100;
 
   //if (isLoading) return <Spinner />;
 
+  const imageUrl = `https://furnitureshopp.pythonanywhere.com/${image}`;
+
   const handleClickBuyProduct = () => {
     buyProducts({
-      id,
-      image_url,
-      name,
-      finalPrice: discount === 0 ? price : discountedPrice,
+      slug,
+      image,
+      title,
+      finalPrice: discount === 0 ? final_price : discountedPrice,
     });
   };
 
@@ -32,21 +45,18 @@ function Product({ product }) {
         discount === 0 ? "justify-start" : "justify-center"
       }`}
     >
-      <NavLink
-        to={`/${parentPath}/${childPath}/eachproduct/${id}`}
-        className="flex items-start"
-      >
-        <img src={image_url} alt="" className="w-full" />
+      <NavLink to={`/products/item/${slug}`} className="flex items-start">
+        <img src={imageUrl} alt="" className="w-full" />
       </NavLink>
 
       <div>
         <span className="block font-normal text-base text-gray-500 font-VazirMedium mb-3">
-          {type}
+          دسته بندی: {category.title}
         </span>
 
         <div className="flex justify-around mb-3">
           <span className="self-center font-normal md:text-xl text-gray-600 font-VazirMedium">
-            {name}
+            {title}
           </span>
           <button
             onClick={handleClickBuyProduct}
@@ -98,7 +108,7 @@ function Product({ product }) {
               discount === 0 ? "" : "line-through text-gray-400"
             }`}
           >
-            {price} تومان
+            {final_price} تومان
           </div>
         </div>
       </div>

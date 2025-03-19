@@ -15,7 +15,7 @@ const FeedbackSwiper = () => {
         <SwiperSlide>
           <div className="flex flex-col items-center">
             <div className="flex w-[88px] h-[88px] rounded-full overflow-hidden">
-              <img src="/public/images/users/1.png" alt="" />
+              <img src="dist/images/users/1.png" alt="" />
             </div>
             <p className="font-Vazir font-normal text-base text-center tracking-tighter mx-10 lg:mx-[154px] mt-8">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
@@ -37,7 +37,7 @@ const FeedbackSwiper = () => {
         <SwiperSlide>
           <div className="flex flex-col items-center">
             <div className="flex w-[88px] h-[88px] rounded-full overflow-hidden">
-              <img src="/public/images/users/2.png" alt="" />
+              <img src="dist/images/users/2.png" alt="" />
             </div>
             <p className="font-Vazir font-normal text-base text-center tracking-tighter mx-10 lg:mx-[154px] mt-8">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
@@ -63,7 +63,7 @@ const FeedbackSwiper = () => {
         <SwiperSlide>
           <div className="flex flex-col items-center">
             <div className="flex w-[88px] h-[88px] rounded-full overflow-hidden">
-              <img src="/public/images/users/3.jpg" alt="" />
+              <img src="dist/images/users/3.jpg" alt="" />
             </div>
             <p className="font-Vazir font-normal text-base text-center tracking-tighter mx-10 lg:mx-[154px] mt-8">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
@@ -78,7 +78,7 @@ const FeedbackSwiper = () => {
         <SwiperSlide>
           <div className="flex flex-col items-center">
             <div className="flex w-[88px] h-[88px] rounded-full overflow-hidden">
-              <img src="/public/images/users/4.jpg" alt="" />
+              <img src="dist/images/users/4.jpg" alt="" />
             </div>
             <p className="font-Vazir font-normal text-base text-center tracking-tighter mx-10 lg:mx-[154px] mt-8">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با

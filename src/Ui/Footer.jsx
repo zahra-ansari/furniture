@@ -80,12 +80,12 @@ const Footer = ({ marginClass }) => {
         <span className="font-VazirBlack">مجوزات:</span>
         <div className="flex flex-col lg:flex-row mt-5">
           <img
-            src="/public/images/permits/rezi.png"
+            src="dist/images/permits/rezi.png"
             alt=""
             className="w-20 h-20"
           />
           <img
-            src="/public/images/permits/enamad.png"
+            src="dist/images/permits/enamad.png"
             alt=""
             className="w-20 h-20"
           />

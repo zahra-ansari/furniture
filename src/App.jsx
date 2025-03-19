@@ -33,21 +33,17 @@ function App() {
           <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to="landing" />} />
             <Route path="landing" element={<Landing />} />
-            <Route path="aboutus" element={<AboutUs />} />
+            <Route path="products" element={<Products />} />
             <Route path="articles" element={<Articles />} />
+            <Route path="about-us" element={<AboutUs />} />
             <Route
-              path="contactusandcriticism"
+              path="contact-us-and-criticism"
               element={<ContactUsAndCriticism />}
             />
-            <Route path="/:page/eacharticle/:id" element={<EachArticle />} />
-            {/* هر اسمی که بعد از : که بدهیم باید برابر باشه با همان اسمی که توی useParams می دهیم .توجه شود به فایل useProductDetail */}
-            <Route
-              path="/:page/:category/eachproduct/:id"
-              element={<EachProduct />}
-            />
+            <Route path="articles/item/:slug" element={<EachArticle />} />
+            <Route path="products/item/:slug" element={<EachProduct />} />
             <Route path="search-products" element={<SearchedProducts />} />
-            {/* <Route path="products" element={<Products />} /> */}
-            <Route path="/:page/:category" element={<Products />} />
+            <Route path="products/category/:category" element={<Products />} />
             <Route path="authentication" element={<Authentication />} />
           </Route>
         </Routes>

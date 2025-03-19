@@ -44,7 +44,7 @@ const PortfolioSwiper = () => {
             </div>
             {/* ml-10 xl:ml-2 */}
             <img
-              src="/public/images/slider/1.png"
+              src="dist/images/slider/1.png"
               className="w-80 h-80 xs:w-52 xs:h-52 md:w-60 md:h-60 lg:w-64 lg:h-64 xl:w-[374px] xl:h-[374px] xs:mt-[73px] xl:mt-[36px] "
               alt=""
             />
@@ -54,10 +54,7 @@ const PortfolioSwiper = () => {
         <SwiperSlide>
           <div className="flex gap-4 px-16 my-20">
             <div className="border border-green rounded-ss-lg rounded-se-sm rounded-ee-lg rounded-es-sm overflow-hidden h-48 md:h-64 w-1/2">
-              <img
-                src="/public/images/slider/2.jpg"
-                className="w-full h-full"
-              />
+              <img src="dist/images/slider/2.jpg" className="w-full h-full" />
             </div>
             <div className="content-center leading-loose text-justify font-VazirMedium text-green mt-3 text-xl md:text-2xl w-1/2">
               با کمک مشاورین ما، مبلمان دلخواهتان را متناسب با نیاز و سلیقه خود

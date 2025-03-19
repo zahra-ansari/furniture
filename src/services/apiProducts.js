@@ -1,26 +1,5 @@
 // import supabase from "./supabase";
 
-// export async function getProducts(category) {
-//   let query = supabase.from("products").select("*");
-
-//   if (category === "حراج") {
-//     query = query.neq("discount", 0);
-//   } else if (category !== "all") {
-//     query = query.eq("type", category);
-//   }
-
-//   const { data, error } = await query;
-
-//   if (error) {
-//     console.error(error);
-//     throw new Error(
-//       "امکان نمایش محصولات در حال حاضر امکان پذیر نمی باشد. لطفا بعدا مراجعه نمائید"
-//     );
-//   }
-
-//   return data;
-// }
-
 // export async function getSearchedProducts(searchTerm, category) {
 //   let query = supabase.from("products").select("*");
 
@@ -38,6 +17,49 @@
 //     console.error(error);
 //     throw new Error(
 //       "امکان جستجوی محصولات در حال حاضر امکان پذیر نمی باشد. لطفا بعدا مراجعه نمائید"
+//     );
+//   }
+
+//   return data;
+// }
+
+export async function getProducts(category) {
+  const response = await fetch(
+    "https://furnitureshopp.pythonanywhere.com/products/"
+  );
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  const data = await response.json();
+
+  let filteredProducts;
+
+  if (category) {
+    filteredProducts = data.results.filter(
+      (product) => product.category.title === category
+    );
+  } else {
+    filteredProducts = data.results;
+  }
+
+  return filteredProducts;
+}
+
+// export async function getProducts(category) {
+//   let query = supabase.from("products").select("*");
+
+//   if (category === "حراج") {
+//     query = query.neq("discount", 0);
+//   } else if (category !== "all") {
+//     query = query.eq("type", category);
+//   }
+
+//   const { data, error } = await query;
+
+//   if (error) {
+//     console.error(error);
+//     throw new Error(
+//       "امکان نمایش محصولات در حال حاضر امکان پذیر نمی باشد. لطفا بعدا مراجعه نمائید"
 //     );
 //   }
 

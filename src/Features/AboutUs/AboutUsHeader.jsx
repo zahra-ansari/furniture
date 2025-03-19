@@ -57,7 +57,7 @@ function AboutUsHeader() {
             <div className="border w-[33%] xl:w-40">
               <div>
                 <img
-                  src="/public/images/users/3.jpg"
+                  src="dist/images/users/3.jpg"
                   className="w-full"
                   alt=""
                 />

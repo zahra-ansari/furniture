@@ -28,7 +28,7 @@ const MenuBar = ({ containerClass, hiddenClass, widthClass }) => {
             </NavLink>
           </li>
           <li>
-            <NavLink to={`/${currentPath}/all`} className="hover:text-green">
+            <NavLink to={`/products`} className="hover:text-green">
               فروشگاه
             </NavLink>
           </li>
@@ -38,12 +38,15 @@ const MenuBar = ({ containerClass, hiddenClass, widthClass }) => {
             </NavLink>
           </li>
           <li>
-            <NavLink to={`/aboutus`} className="hover:text-green">
+            <NavLink to={`/about-us`} className="hover:text-green">
               درباره ما
             </NavLink>
           </li>
           <li>
-            <NavLink to={`/contactusandcriticism`} className="hover:text-green">
+            <NavLink
+              to={`/contact-us-and-criticism`}
+              className="hover:text-green"
+            >
               ارتباط با ما
             </NavLink>
           </li>

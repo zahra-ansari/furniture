@@ -1,4 +1,4 @@
-//import { convertToPersian } from "../../utils/helpers";
+import { convertToPersian } from "../../utils/helpers";
 import PropTypes from "prop-types";
 // import { useArticleDetail } from "./useArticleDetail";
 // import { useFetchComment } from "../CommentBox/useFetchComment";
@@ -6,8 +6,8 @@ import PropTypes from "prop-types";
 // import { useFetchReplyComment } from "../CommentBox/useFetchReplyComment";
 
 function ArticleDetail({ articleDetail }) {
-  const { id, title, content, created_at, updated_at, image_url } =
-    articleDetail;
+  const { content, create_at, image, slug, title, update_at } = articleDetail;
+  const imageUrl = `https://furnitureshopp.pythonanywhere.com/${image}`;
 
   // const { id: articleId } = useArticleDetail();
 
@@ -59,22 +59,17 @@ function ArticleDetail({ articleDetail }) {
     <>
       <div className="flex flex-col items-center justify-center">
         <div className="xl:w-[550px] xl:h-[275px]">
-          {/* <img src={image_url} className="w-full h-full" /> */}
-          <img src="/images/article/1.png" className="w-full h-full" />
+          <img src={imageUrl} className="w-full h-full" />
         </div>
         <span className="font-Vazir xl:w-[550px] mt-4 text-justify">
-          {/* {content} */}
-          {
-            "لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفا به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند."
-          }
+          {content}
         </span>
       </div>
       <div className="flex flex-col gap-y-5 mt-4 xl:mt-0">
         <span className="font-VazirBlack text-2xl">{title}</span>
         <div>
           <span className="font-VazirMedium">تاریخ: </span>
-          {/* <span className="font-Vazir">{convertToPersian(created_at)}</span> */}
-          <span className="font-Vazir">{"11 / 12 / 1400"}</span>
+          <span className="font-Vazir">{convertToPersian(create_at)}</span>
         </div>
         <div>
           <span className="font-VazirMedium">تعداد نظرات: </span>

@@ -86,7 +86,7 @@ const CommentBox = ({
           <div className="flex justify-between">
             <div className="flex gap-x-3">
               <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
-                <img src="/public/images/users/3.jpg" alt="" />
+                <img src="dist/images/users/3.jpg" alt="" />
               </div>
               <div className="flex flex-col">
                 <span className="font-VazirBold">{"مریم"}</span>
@@ -110,7 +110,7 @@ const CommentBox = ({
             <div className="border p-4 w-[90%] mx-auto my-7">
               <div className="flex gap-x-3">
                 <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
-                  <img src="/public/images/users/2.png" alt="" />
+                  <img src="dist/images/users/2.png" alt="" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-VazirBold">{"علی"}</span>
